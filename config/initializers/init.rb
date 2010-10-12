@@ -1,0 +1,2 @@
+ApplicationController.helper(MagickImagesHelper)
+

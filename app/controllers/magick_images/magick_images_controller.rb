@@ -6,7 +6,7 @@ module MagickImages
     def show
       path = "public/magick_images/#{params[:style]}/#{params[:image_name]}.#{params[:extension]}"
 
-      if !File.exists?(Rails.root + path)
+      if !File.exists?(File.join(Rails.root, path))
         MagickImages::create_image(
           :style      => params[:style].to_sym,
           :image_name => params[:image_name],

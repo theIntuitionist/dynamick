@@ -1,6 +1,14 @@
 require File.join(File.dirname(__FILE__), '/../../lib/magick_image_author.rb')
 require 'RMagick'
 
+
+ActionController::Dispatcher.to_prepare do
+  puts 'HELLO THERE'
+  ApplicationController.helper(MagickImagesHelper)
+end
+
+
+
 module MagickImages
 	@@styles = {}
 
@@ -25,3 +33,4 @@ module MagickImages
 end
 
 MagickImages::init()
+
