@@ -1,2 +1,2 @@
-ApplicationController.helper(MagickImagesHelper)
+ApplicationController.helper(DynamickHelper)
 
