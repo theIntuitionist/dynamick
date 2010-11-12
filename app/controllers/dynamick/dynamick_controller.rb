@@ -15,7 +15,7 @@ module Dynamick
         )
       end
 
-      send_file path, :x_sendfile => true, :type => "image/#{params[:extension]}", :disposition => 'inline'
+      send_file path, :type => "image/#{params[:extension]}", :disposition => 'inline'
     end
   end
 end
